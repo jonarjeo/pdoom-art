@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pdoom.art — what's your p(doom)?</title>
+  <meta name="description" content="p(doom) is the probability that AI causes a catastrophic outcome for humanity. Memes, media, and related projects — lightly toasted." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://pdoom.art/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pdoom.art/" />
+  <meta property="og:title" content="pdoom.art — what's your p(doom)?" />
+  <meta property="og:description" content="Probability AI ends us, but make it memeable. Featured media + feed of p(doom) culture." />
+  <meta property="og:image" content="https://pdoom.art/favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="pdoom.art — what's your p(doom)?" />
+  <meta name="twitter:description" content="Probability AI ends us, but make it memeable." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="sr-only" href="#featured">Skip to featured</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/">
+        <img src="favicon.svg" width="32" height="32" alt="" />
+        <span>p<em>doom</em>.art</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#featured">Featured</a>
+        <a href="#feed">Feed</a>
+        <a href="#explain">WTF is p(doom)</a>
+        <a href="#related">Related</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="pill"><span class="dot" aria-hidden="true"></span> live from the timelines · not financial advice · not doom advice</div>
+        <h1 id="hero-title">
+          what's your <span class="accent">p(doom)</span>?
+        </h1>
+        <p class="hero-lead">
+          <strong>p(doom)</strong> is the probability that AI causes a
+          <em>catastrophic</em> outcome for humanity — extinction-adjacent, civilization-wrecking, “oops we built the wrong god” vibes.
+          Serious people argue about the number. The rest of us turn it into memes.
+          This site is the latter, with respect for the former.
+        </p>
+
+        <div class="prob-stage" aria-hidden="false">
+          <div class="prob-ring" aria-hidden="true"></div>
+          <div class="prob-core">
+            <div class="prob-label">your vibe check</div>
+            <button type="button" class="prob-value" id="prob-value" title="Click to resample">—</button>
+            <div class="prob-hint">tap to resample · <kbd>~Bayesian roulette</kbd></div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#featured">See today's doompost</a>
+          <a class="btn btn-ghost" href="#explain">Explain like I'm slightly online</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Featured -->
+    <section id="featured" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured</span>
+            <h2 id="featured-title">one piece of media. chef's kiss of crisis.</h2>
+          </div>
+          <p>Driven by <code>data/featured.json</code> — swap without touching HTML.</p>
+        </div>
+        <div id="featured-root">
+          <p class="feed-status">Loading featured…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Feed -->
+    <section id="feed" aria-labelledby="feed-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Feed</span>
+            <h2 id="feed-title">recent p(doom) media</h2>
+          </div>
+          <p>From <code>data/feed.json</code>. Tweets, images, clips, YouTube.</p>
+        </div>
+        <div id="feed-root">
+          <p class="feed-status">Loading feed…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explainer -->
+    <section id="explain" aria-labelledby="explain-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Primer</span>
+            <h2 id="explain-title">WTF is p(doom), briefly</h2>
+          </div>
+        </div>
+        <div class="explainer">
+          <article class="explain-card">
+            <div class="emoji" aria-hidden="true">🎲</div>
+            <h3>It's a number people argue about</h3>
+            <p>
+              Ask researchers, founders, and Twitter for “probability AI causes existential catastrophe”
+              and you'll get anything from &lt;1% to &gt;90%. The spread <em>is</em> the discourse.
+            </p>
+          </article>
+          <article class="explain-card">
+            <div class="emoji" aria-hidden="true">🦞</div>
+            <h3>It's also a meme</h3>
+            <p>
+              “What's your p(doom)?” is the new “what's your sign?” — except the answer can ruin dinner.
+              We collect the art, posts, and chaos so you don't have to doomscroll alone.
+            </p>
+          </article>
+          <article class="explain-card">
+            <div class="emoji" aria-hidden="true">🧪</div>
+            <h3>It's related to real work</h3>
+            <p>
+              Benchmarks, research hubs, and games explore the same question with fewer shitposts.
+              See the related projects below if you want the serious shelf.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Related projects -->
+    <section id="related" class="related" aria-labelledby="related-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Related</span>
+            <h2 id="related-title">projects in the constellation</h2>
+          </div>
+          <p>Not affiliates — neighbors on the graph.</p>
+        </div>
+        <div class="related-grid">
+          <a class="related-card" href="https://doombench.com" target="_blank" rel="noopener noreferrer">
+            <div class="name">DoomBench</div>
+            <div class="desc">Benchmarks for doom-adjacent AI eval vibes. Measure the scary.</div>
+            <div class="url">doombench.com</div>
+          </a>
+          <a class="related-card" href="https://pdoom1.com" target="_blank" rel="noopener noreferrer">
+            <div class="name">p(Doom)1</div>
+            <div class="desc">A game / experience riffing on p(doom). Play your priors.</div>
+            <div class="url">pdoom1.com</div>
+          </a>
+          <a class="related-card" href="https://pdoom.org" target="_blank" rel="noopener noreferrer">
+            <div class="name">pdoom.org</div>
+            <div class="desc">Research-flavored home for the p(doom) conversation.</div>
+            <div class="url">pdoom.org</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="mono">pdoom.art</span> · static · meme-forward · update via JSON
+      </div>
+      <div>
+        Built for fun. Catastrophe optional.
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">Deploy notes in README</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

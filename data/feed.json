@@ -1,0 +1,52 @@
+[
+  {
+    "id": "feat-level5",
+    "url": "https://www.youtube.com/watch?v=mp-HWukUDSE",
+    "type": "youtube",
+    "title": "King Gizzard & the Lizard Wizard - Level 5 [Official Video]",
+    "author": "King Gizzard And The Lizard Wizard",
+    "engagement": "718,918 views",
+    "mediaUrl": "https://www.youtube.com/embed/mp-HWukUDSE",
+    "note": "Featured winner: p(doom) Records' sci-fi techno surgery/rave video; visually outrageous, instantly legible, and broadly shareable. Official upload; view count checked Sep 25, 2026."
+  },
+  {
+    "id": "feed-dario-25",
+    "url": "https://www.youtube.com/shorts/ASgy4Ygoux8",
+    "type": "youtube",
+    "title": "Dario Amodei: there's a 25% chance AI ends in disaster",
+    "author": "ControlAI",
+    "engagement": "5,029 views; 48 likes; 16 comments",
+    "mediaUrl": "https://www.youtube.com/embed/ASgy4Ygoux8",
+    "note": "The deadpan 'relatively optimistic' 25% doom estimate is a perfect short-form p(doom) punchline."
+  },
+  {
+    "id": "feed-anthropic-doom",
+    "url": "https://www.youtube.com/shorts/GLv62w2G6os",
+    "type": "youtube",
+    "title": "Anthropic CEO shares his predicted likelihood of AI doom vs success",
+    "author": "The Logan Bartlett Show",
+    "engagement": "51,416 views; 708 likes; 50 comments",
+    "mediaUrl": "https://www.youtube.com/embed/GLv62w2G6os",
+    "note": "A compact, highly shareable clip: 10\u201325% catastrophe versus a utopian upside, delivered by Dario Amodei."
+  },
+  {
+    "id": "feed-whats-your-pdoom",
+    "url": "https://www.youtube.com/shorts/9oTLZlleDjQ",
+    "type": "youtube",
+    "title": "What's Your P(doom)? - Ryan Greenblatt, Redwood Research",
+    "author": "Apart - Safe AI",
+    "engagement": "624 views; 7 likes",
+    "mediaUrl": "https://www.youtube.com/embed/9oTLZlleDjQ",
+    "note": "The exact viral-question format pdoom.art needs: Ryan immediately undercuts the bit with 'it depends how you operationalize it.'"
+  },
+  {
+    "id": "feed-dumb-meme",
+    "url": "https://www.lesswrong.com/posts/6h7aAd4aw8YgCAbF6/p-doom-is-a-dumb-meme",
+    "type": "image",
+    "title": "P(doom) is a Dumb Meme",
+    "author": "Max Harms",
+    "engagement": "134 points; 35 comments",
+    "mediaUrl": "https://res.cloudinary.com/lesswrong-2-0/image/upload/v1782339549/lexical_client_uploads/wbeaggifsnw9iekovwtl.png",
+    "note": "Known AI-safety writer turns the community's favorite fake-precision ritual into a highly memetic visual critique."
+  }
+]

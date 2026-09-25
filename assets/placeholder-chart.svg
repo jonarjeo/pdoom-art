@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="pdoom distribution chart placeholder">
+  <rect width="800" height="500" fill="#0b0d12"/>
+  <text x="400" y="48" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" fill="#e8ecf4" font-weight="700">p(doom) Twitter poll · n=fake</text>
+  <!-- axes -->
+  <line x1="80" y1="420" x2="740" y2="420" stroke="#2a3142" stroke-width="2"/>
+  <line x1="80" y1="80" x2="80" y2="420" stroke="#2a3142" stroke-width="2"/>
+  <!-- bars -->
+  <rect x="110" y="340" width="70" height="80" fill="#7c3aed" rx="4"/>
+  <rect x="210" y="280" width="70" height="140" fill="#a855f7" rx="4"/>
+  <rect x="310" y="160" width="70" height="260" fill="#ff3d71" rx="4"/>
+  <rect x="410" y="200" width="70" height="220" fill="#ff6b35" rx="4"/>
+  <rect x="510" y="260" width="70" height="160" fill="#fbbf24" rx="4"/>
+  <rect x="610" y="360" width="70" height="60" fill="#34d399" rx="4"/>
+  <!-- labels -->
+  <text x="145" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">&lt;1%</text>
+  <text x="245" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">1–10%</text>
+  <text x="345" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">10–30%</text>
+  <text x="445" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">30–60%</text>
+  <text x="545" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">60–90%</text>
+  <text x="645" y="445" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#8b93a7">&gt;90%</text>
+  <text x="400" y="485" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="#8b93a7">placeholder chart — swap via feed.json</text>
+</svg>
