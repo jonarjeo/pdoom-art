@@ -1,6 +1,10 @@
 # pdoom.art
 
-Clean, fun, meme-savvy single-page static site about **p(doom)** — the probability that AI causes a catastrophic outcome for humanity.
+A meme museum for AI doom culture: a single-page static site about **p(doom)** — the probability that AI causes a catastrophic outcome for humanity.
+
+Sections: hero with a p(doom) vibe-check roulette (spin, slider, share) → featured exhibit (click-to-play YouTube + museum placard) → horizontally scrolling feed → primer → related projects (DoomBench, p(Doom)1, pdoom.org).
+
+Fonts: Bricolage Grotesque (display/body), Instrument Serif (italic accents), JetBrains Mono (labels) via Google Fonts. Motion respects `prefers-reduced-motion`.
 
 No build step. Vanilla HTML / CSS / JS. Deploy as static files to GitHub Pages or Vercel.
 
@@ -46,9 +50,9 @@ Or: `npx serve .`
 | `tweet` | `embedHtml` | Official X embed: `blockquote.twitter-tweet` + lazy-loaded `widgets.js` |
 | `image` | `mediaUrl` | `<img>` (local or remote URL) |
 | `video` | `mediaUrl` | `<video controls>` |
-| `youtube` | `mediaUrl` | iframe; prefer `https://www.youtube.com/embed/VIDEO_ID` |
+| `youtube` | `mediaUrl` or `url` | Any watch / embed / shorts / youtu.be URL. Rendered as a thumbnail facade that loads a `youtube-nocookie.com` iframe on click. Shorts get a vertical frame. |
 
-Featured tweets get the full blockquote embed. Feed tweets show a compact text preview (full embed only in featured to keep the grid fast).
+Featured tweets get the full blockquote embed. Feed tweets show a text card linking out. A feed item with the same `id` as the featured item is skipped so the exhibit isn't shown twice. `note` is shown on the featured placard and as the feed card blurb.
 
 ## Deploy: GitHub Pages
 
@@ -87,6 +91,7 @@ pdoom-art/
 ├── favicon.svg
 ├── CNAME                 # pdoom.art
 ├── robots.txt
+├── sitemap.xml
 ├── README.md
 ├── css/styles.css
 ├── js/main.js
