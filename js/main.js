@@ -205,15 +205,13 @@ function wireRail(rail) {
 /* ---------- Vibe check ---------- */
 
 const VERDICTS = [
-  [0, "Pure copium. Or you know something we don't."],
-  [1, "Touch-grass tier. Sunscreen is your main existential risk."],
-  [5, "Median-AI-researcher energy. Still wouldn't board that plane."],
-  [10, "“Relatively optimistic” frontier-lab CEO."],
-  [25, "Nervous laughter at dinner parties."],
-  [50, "Coin-flip enjoyer. Heads, utopia."],
-  [75, "Reading alignment forums at 3 a.m."],
-  [95, "Stocking canned goods. Drafting a very long blog post."],
-  [100, "Shop's closed. Thanks for playing."],
+  [0, "Brunch accelerationist. \"It's just autocomplete.\""],
+  [5, "Median surveyed AI researcher. Still skipping that flight."],
+  [10, '"Relatively optimistic" frontier-lab CEO.'],
+  [25, "Nervous laugh at dinner."],
+  [50, "Coin-flip enjoyer. Heads = utopia."],
+  [75, "Alignment Twitter at 3 a.m."],
+  [90, "Canned goods in the cart. Drafting the longpost."],
 ];
 
 function verdictFor(n) {
@@ -292,7 +290,7 @@ function wireVibeCheck() {
   });
 
   share?.addEventListener("click", async () => {
-    const text = `My p(doom) is ${current}%. ${verdictFor(current)} What's yours?`;
+    const text = `My p(doom) is ${current}%. What's yours?`;
     const url = "https://pdoom.art/";
     try {
       if (navigator.share) {
@@ -300,10 +298,10 @@ function wireVibeCheck() {
         status.textContent = "Shared. Godspeed.";
       } else {
         await navigator.clipboard.writeText(`${text} ${url}`);
-        status.textContent = "Copied to clipboard. Go ruin a group chat.";
+        status.textContent = "Copied. Go ruin a group chat.";
       }
     } catch (err) {
-      if (err?.name !== "AbortError") status.textContent = "Couldn't share. The machines resist.";
+      if (err?.name !== "AbortError") status.textContent = "Couldn't share. Machines said no.";
     }
   });
 
@@ -383,7 +381,7 @@ async function boot() {
       renderFeatured(featuredRoot, item);
     } else {
       console.warn(featured.reason);
-      featuredRoot.innerHTML = `<p class="status">Couldn't load the featured exhibit. <a href="https://www.youtube.com/watch?v=mp-HWukUDSE">Watch Level 5 on YouTube ↗</a></p>`;
+      featuredRoot.innerHTML = `<p class="status">Couldn't load Exhibit A. <a href="https://www.youtube.com/watch?v=mp-HWukUDSE">Watch Level 5 on YouTube ↗</a></p>`;
     }
   }
 
@@ -392,12 +390,12 @@ async function boot() {
       const all = Array.isArray(feed.value) ? feed.value : feed.value.items || [];
       // Don't repeat the featured exhibit on the wall.
       const items = all.filter((it) => !featuredId || it.id !== featuredId);
-      feedRoot.innerHTML = items.map(feedCard).join("") || `<p class="status">The wall is empty. Suspiciously so.</p>`;
+      feedRoot.innerHTML = items.map(feedCard).join("") || `<p class="status">Wall's empty. Weird.</p>`;
       wireFacades(feedRoot);
       wireRail(feedRoot);
     } else {
       console.warn(feed.reason);
-      feedRoot.innerHTML = `<p class="status">Couldn't load the feed.</p>`;
+      feedRoot.innerHTML = `<p class="status">Feed won't load.</p>`;
     }
   }
 }
