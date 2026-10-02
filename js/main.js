@@ -1,5 +1,8 @@
-/* pdoom.art — vanilla JS, no build step.
-   DOM hooks: #prob-* (vibe check), #featured-root, #feed-root, [data-rail], .reveal */
+import { initTTS, wirePlacardListen } from "./tts.js";
+
+/* pdoom.art — vanilla JS module, no build step.
+   DOM hooks: #prob-* (vibe check), #featured-root, #feed-root, [data-rail], .reveal
+   TTS: Kyutai Pocket TTS via js/tts.js (WASM worker, lazy model load). */
 
 const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -364,6 +367,7 @@ async function boot() {
   wireVibeCheck();
   wireNavHighlight();
   wireCardGlow();
+  initTTS();
 
   const featuredRoot = document.getElementById("featured-root");
   const feedRoot = document.getElementById("feed-root");
@@ -379,6 +383,7 @@ async function boot() {
       const item = featured.value.item || featured.value;
       featuredId = item.id;
       renderFeatured(featuredRoot, item);
+      wirePlacardListen(featuredRoot);
     } else {
       console.warn(featured.reason);
       featuredRoot.innerHTML = `<p class="status">Couldn't load Exhibit A. <a href="https://www.youtube.com/watch?v=mp-HWukUDSE">Watch Level 5 on YouTube ↗</a></p>`;

@@ -8,6 +8,15 @@ Fonts: Bricolage Grotesque (display/body), Instrument Serif (italic accents), Je
 
 No build step. Vanilla HTML / CSS / JS. Deploy as static files to GitHub Pages or Vercel.
 
+## Read aloud (Pocket TTS)
+
+The page can read the hero, primer, featured placard, or selected text aloud in the browser using [Kyutai Pocket TTS](https://github.com/kyutai-labs/pocket-tts) via the community [xn WASM](https://laurentmazare.github.io/pocket-tts/) runtime.
+
+- On-site assets: `js/pocket-tts/ptts_wasm.js` + `ptts_wasm_bg.wasm` (~931 KB) + worker
+- On first listen, the browser downloads ~146 MB q8 weights (+ one voice embedding) from Hugging Face (`lmz/pocket-tts-without-voice-cloning-q8`, `kyutai/pocket-tts-without-voice-cloning`)
+- No build step; still static GitHub Pages–friendly (model is not vendored in the repo)
+
+
 ## Local preview
 
 `fetch()` for `data/*.json` does **not** work from `file://`. Serve the folder over HTTP:
